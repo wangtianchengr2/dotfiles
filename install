@@ -1,0 +1,49 @@
+#! /bin/sh
+
+function install_config {
+    source_path=$1
+    target_path=$2
+	
+    if [[ true ]]; then
+	exit 1
+    fi
+    echo $1
+    echo $2
+	
+}
+
+uname=$(uname)
+echo "os: ${uname}"
+
+echo "Installing fish ..."
+# brew install fish
+
+echo "Linking fish config ..."
+fish_path="~/.config/fish"
+fish_source_path="~/src/dotfiles/fish"
+install_config $fish_path $fish_source_path
+exit 1
+
+
+if [[ -L a.c ]] && [[ "$(readlink a.c)" = "b.c" ]] 
+ln -s ~/src/dotfiles/fish ~/.config/fish
+ln -s ~/src/dotfiles/nvim ~/.config/nvim
+ln -s ~/src/dotfiles/alacritty ~/.config/alacritty
+
+# piplines
+# install app
+# install config
+# install package
+
+# fish
+# install fish
+# add fish to /etc/shells
+# chsh
+# add fish config
+
+# neovim
+# brew install
+# npm i -g install pyright
+# npm install -g typescript typescript-language-server
+# brew install lua-language-server
+# https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
