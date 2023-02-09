@@ -109,6 +109,7 @@ require("packer").startup(function(use)
           -- require("null-ls").builtins.diagnostics.eslint,
           -- require("null-ls").builtins.completion.spell,
           require("null-ls").builtins.formatting.black,
+          -- require("null-ls").builtins.formatting.black.with({ extra_args = { "-l", "80" } }),
           require("null-ls").builtins.formatting.prettierd
         }
       })

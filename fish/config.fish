@@ -14,3 +14,6 @@ set fzf_fd_opts --hidden -E .git -E .virtualenvs -E .cargo -E .cache -E .fonts -
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/luffyx/google-cloud-sdk/path.fish.inc' ]; . '/home/luffyx/google-cloud-sdk/path.fish.inc'; end
 
+
+pyenv init - | source
+
