@@ -76,7 +76,10 @@ require("packer").startup(function(use)
   use "navarasu/onedark.nvim"
   use "tpope/vim-fugitive"
   use "qpkorr/vim-bufkill"
-  use "ggandor/leap.nvim"
+  use { "ggandor/leap.nvim",
+    config = function()
+      require('leap').add_default_mappings()
+    end, }
   use { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" }
   use 'junegunn/goyo.vim'
   use { 'lewis6991/gitsigns.nvim' }
@@ -494,7 +497,6 @@ vim.cmd([[hi LineNr ctermfg=None]])
 --      }
 --  }
 --}
-require("leap").set_default_keymaps()
 require("telescope").setup({
   defaults = {
     -- ...
@@ -584,7 +586,7 @@ require("lspconfig")["tsserver"].setup({
   on_attach = on_attach,
   flags = lsp_flags,
 })
-require("lspconfig")["sumneko_lua"].setup({
+require("lspconfig")["lua_ls"].setup({
   on_attach = on_attach,
   flags = lsp_flags,
   settings = {
@@ -604,3 +606,5 @@ require 'usr.plugins.cmp'
 -- vim.api.nvim_create_autocmd({"BufRead"}, {
 -- callback = function() require'ufo'.closeAllFolds() end,
 -- })
+
+-- require("leap").set_default_keymaps(true)

@@ -13,8 +13,10 @@ vim.o.splitright = true
 vim.o.signcolumn = "no"
 vim.o.tw = 79
 vim.o.nuw = 1
+vim.o.so = 999
 vim.opt.foldopen:remove({ "block" })
-
+vim.o.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20"
+vim.o.ve="onemore"
 
 -- cmd
 vim.cmd 'filetype plugin indent on'
@@ -83,6 +85,7 @@ vim.cmd([[
 vim.cmd([[
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 ]])
+vim.cmd[[autocmd InsertLeave * :normal `^]]
 
 
 -- keymaps

@@ -63,10 +63,10 @@ colors:
   #
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
-  #cursor:
+  cursor:
   #  text: '0x000000'
   #  cursor: '0xffffff'
-
+    cursor: '0x00ff00'
   # Normal colors
   normal:
     black:   '0x1e2127'
@@ -108,3 +108,7 @@ colors:
   # The indexed colors include all colors from 16 to 256.
   # When these are not set, they're filled with sensible defaults.
   #indexed_colors:
+  scrolling:
+  # How many lines of scrollback to keep,
+  # '0' will disable scrolling.
+    history: 10000
