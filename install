@@ -25,8 +25,9 @@ install_config $fish_path $fish_source_path
 exit 1
 
 
-if [[ -L a.c ]] && [[ "$(readlink a.c)" = "b.c" ]] 
-ln -s ~/src/dotfiles/fish ~/.config/fish
+if [[ -L a.c ]] && [[ "$(readlink a.c)" = "b.c" ]]
+# better reinstall
+# ln -s ~/src/dotfiles/fish ~/.config/fish
 ln -s ~/src/dotfiles/nvim ~/.config/nvim
 ln -s ~/src/dotfiles/alacritty ~/.config/alacritty
 
@@ -37,9 +38,8 @@ ln -s ~/src/dotfiles/alacritty ~/.config/alacritty
 
 # fish
 # install fish
-# add fish to /etc/shells
-# chsh
-# add fish config
+# install fisher
+# fisher install nvm
 
 # neovim
 # brew install
